@@ -1,0 +1,5 @@
+@import "tailwindcss";
+@theme {
+    --color-pagecolor: #F5F2EB;
+    --color-btncolor:#FCCA85;
+}
