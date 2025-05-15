@@ -1,5 +1,13 @@
 @import "tailwindcss";
-@theme {
-    --color-pagecolor: #F5F2EB;
-    --color-btncolor:#FCCA85;
+#seekBar{
+    -webkit-appearance: none;
+    appearance: none;
+
+}
+#seekBar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
 }

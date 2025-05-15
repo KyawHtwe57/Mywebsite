@@ -32,12 +32,19 @@
                 <div>
                     <div class="flex justify-center items-center">
                         <div class="mt-5">
-                            <form class="px-6">
-                                <label for="text">Email or Phone Number</label>
-                                <input type="text" placeholder="Enter Email or Phone Number" class="w-100 my-3 p-2 border-2 border-blue-600 rounded-md outline-none" required>
-                                <label for="Password" >Passcode</label>
-                                <input type="password" placeholder="Enter Passcode" class="w-100 my-3 p-2 border-2 border-blue-600  rounded-md outline-none" required>
-                                <button class="bg-blue-600 p-2 w-100 mt-5 rounded-md cursor-pointer text-white"><a href="main.html">Sign In</a></button>
+                            <form id="signIn" class="px-6">
+                                <div>
+                                    <label for="text">Email or Phone Number</label>
+                                    <input id="email" type="text" placeholder="Enter Email or Phone Number" class="w-100 mt-2 p-2 border-2 border-blue-600 rounded-md outline-none" >
+                                    <small id="emailError" class="text-red-600 hidden"></small>
+                                </div>
+                                <div class="mt-3">
+                                    <label for="Password" >Passcode</label>
+                                    <input id="password" type="password" placeholder="Enter Passcode" class="w-100 mt-2 p-2 border-2 border-blue-600  rounded-md outline-none" >
+                                    <small id="passwordError" class="text-red-600 hidden"></small>
+                                </div>
+                                
+                                <button type="submit" class="bg-blue-600 p-2 w-100 mt-5 rounded-md cursor-pointer text-white">Sgin In</button>
                             </form>     
                         </div>    
                     </div>
@@ -56,6 +63,8 @@
     <footer class="flex items-center justify-center mt-15">
         <p class="hover:underline cursor-pointer">Copyright @FRrrMusic 2025 Privacy Policy</p>
     </footer>
+
+    <script src="script/index.js"></script>
     <script src="https://kit.fontawesome.com/f488a9e6e0.js" crossorigin="anonymous"></script>
 </body>
 </html>

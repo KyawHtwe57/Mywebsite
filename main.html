@@ -14,308 +14,243 @@
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
 
-    <header class="bg-white shadow-md sticky top-0 w-full">
+    <header class="bg-black shadow-md sticky top-0 w-full">
       <div class="container mx-auto flex justify-between items-center px-6 py-4">
-        <h1 class="text-2xl font-bold">
-          <span class="bg-blue-600 rounded text-white p-1">FRrr</span>
+        <h1 class="text-2xl font-bold text-white">
+          <span class="bg-[#323c53] rounded text-white p-1">FRrr</span>
           Music
         </h1>
         <form class="relative border-none rounded-md bg-white ">
-          <input type="text" placeholder="What do you want to play?" class="w-80 border-2 border-black rounded py-2 pl-15">
+          <input type="text" placeholder="What do you want to play?" class="w-80 border-2 outline-none rounded py-2 pl-15">
           <i class="fa-solid fa-magnifying-glass absolute left-5 top-2.5 p-1"></i>
         </form>
-        <nav class="space-x-6">
-          <a href="#" class="hover:text-blue-600">Home</a>
-          <a href="#" class="hover:text-blue-600">Categories</a>
-          <a href="#" class="hover:text-blue-600">About</a>
-          <a href="#" class="hover:text-blue-600">Contact</a>
-        </nav>
+        <span id="profile">
+          <img src="img/image1.jpg" alt="" class="w-10 h-10 border-2 rounded-4xl  cursor-pointer">
+        </span>
       </div>
     </header>
+    <div id="dropdownMenu" class="hidden absolute right-5 mt-2 w-56 bg-[#171714] rounded-lg shadow-lg z-100 p-3">
+      <ul class="w-full space-y-1">
+        <li class="hover:bg-[#2A2A2A] p-3 rounded hover:underline cursor-pointer">
+          <a href="#" class= " text-white">Account</a>
+        </li>
+        <li class="hover:bg-[#2A2A2A] p-3 rounded hover:underline cursor-pointer"> 
+          <a href="#" class= " text-white">Profile</a>
+        </li>
+        <li class="hover:bg-[#2A2A2A] p-3 rounded hover:underline cursor-pointer">
+          <a href="#" class= " text-white">Support</a>
+        </li>
+        <li class="hover:bg-[#2A2A2A] p-3 rounded hover:underline cursor-pointer">
+          <a href="#" class= " text-white">Download</a>
+        </li>
+        <li class="hover:bg-[#2A2A2A] p-3 rounded hover:underline cursor-pointer">
+          <a href="#" class= " text-white">Settings</a>
+        </li>
+        <li class="hover:bg-[#2A2A2A] p-3 rounded hover:underline cursor-pointer">
+          <a href="index.html" class= "text-red-400">Log out</a>
+        </li>
+      </ul>   
+    </div>
 
-    <main class="h-[680px] p-2 flex justify-between">
-      <div class="w-80 bg-amber-300 rounded-2xl h-[680px] overflow-y-auto">
-        <div class="flex bg-amber-700 justify-between p-3 text-center items-center rounded-t-2xl sticky top-0 w-80 z-100">
-          <h1 class="font-bold">Playlist</h1>
-          <button class="bg-blue-600 text-white rounded p-1">
+    <main class="flex justify-center items-center w-full p-2 bg-black">
+      <div class="flex justify-evenly items-center gap-0 w-full">
+        <div id="Box1" class="bg-[#171714] shadow-2xl rounded-2xl h-[670px] overflow-y-auto w-85"> 
+          <div class="flex bg-[#171714] justify-between p-3 text-center items-center rounded-t-2xl sticky top-0 w-80 z-50">
+            <h1 class="font-bold text-white">Playlists</h1>
+            <button class="bg-white text-black rounded p-1 cursor-pointer">
             <i class="fa-solid fa-plus "></i>
             Create
-          </button>  
+          </button>
+          </div>  
+          <ul class="p-3 space-y-2">
+            <li class="flex items-center space-x-2 rounded p-2 text-white hover:bg-[#2A2A2A] cursor-pointer">
+              <img src="img/image1.jpg" alt="" class="w-13 h-13 rounded">
+              <h1>Playlist_1</h1>
+            </li>
+            <li class="flex items-center space-x-2 rounded p-2 text-white hover:bg-[#2A2A2A] cursor-pointer">
+              <img src="img/image2.jpg" alt="" class="w-13 h-13 rounded">
+              <h1>Playlist_1</h1>
+            </li>
+            <li class="flex items-center space-x-2 rounded p-2 text-white hover:bg-[#2A2A2A] cursor-pointer">
+              <img src="img/image3.jpg" alt="" class="w-13 h-13 rounded">
+              <h1>Playlist_1</h1>
+            </li>
+            <li class="flex items-center space-x-2 rounded p-2 text-white hover:bg-[#2A2A2A] cursor-pointer">
+              <img src="img/image4.jpg" alt="" class="w-13 h-13 rounded">
+              <h1>Playlist_1</h1>
+            </li>
+            <li class="flex items-center space-x-2 rounded p-2 text-white hover:bg-[#2A2A2A] cursor-pointer">
+              <img src="img/image5.jpg" alt="" class="w-13 h-13 rounded">
+              <h1>Playlist_1</h1>
+            </li>
+          </ul>
         </div>
-        <!-- <div class="grid grid-cols-1 space-y-2 p-2 items-center justify-center">
-          <div class="border rounded w-70 flex items-center space-x-2 hover:bg-blend-overlay">
-            <img src="img/music.jpg" alt="" class="object-cover w-10 rounded">
-            <h1>Playlist</h1>
+        <div id="Box2" class="bg-[#171714] shadow-2xl rounded-2xl h-[670px] overflow-y-auto w-180 text-white">
+          <header class="sticky top-0 bg-[#171714] p-3 rounded-t-2xl">
+            <button class="bg-blue-100 p-2 rounded-2xl text-black">All</button>
+            <button class="bg-blue-100 p-2 rounded-2xl text-black">Music</button>
+            <button class="bg-blue-100 p-2 rounded-2xl text-black">Podcasts</button>
+          </header>
+          <div class="w-full grid grid-cols-2 gap-0">
+            <ul class="p-3">
+              <li class="flex items-center space-x-2 rounded p-2 text-white bg-[#2A2A2A] hover:bg-[#3e3e3e] cursor-pointer">
+                <img src="img/image1.jpg" alt="" class="w-13 h-13 rounded">
+                <h1>Playlist_1</h1>
+              </li>
+            </ul>
+            <ul class="p-3">
+              <li class="flex items-center space-x-2 rounded p-2 text-white bg-[#2A2A2A] hover:bg-[#3e3e3e] cursor-pointer">
+                <img src="img/image2.jpg" alt="" class="w-13 h-13 rounded">
+                <h1>Playlist_1</h1>
+              </li>
+            </ul>
+            <ul class="p-3">
+              <li class="flex items-center space-x-2 rounded p-2 text-white bg-[#2A2A2A] hover:bg-[#3e3e3e] cursor-pointer">
+                <img src="img/image2.jpg" alt="" class="w-13 h-13 rounded">
+                <h1>Playlist_1</h1>
+              </li>
+            </ul>
+            <ul class="p-3">
+              <li class="flex items-center space-x-2 rounded p-2 text-white bg-[#2A2A2A] hover:bg-[#3e3e3e] cursor-pointer">
+                <img src="img/image2.jpg" alt="" class="w-13 h-13 rounded">
+                <h1>Playlist_1</h1>
+              </li>
+            </ul>
+            <ul class="p-3">
+              <li class="flex items-center space-x-2 rounded p-2 text-white bg-[#2A2A2A] hover:bg-[#3e3e3e] cursor-pointer">
+                <img src="img/image2.jpg" alt="" class="w-13 h-13 rounded">
+                <h1>Playlist_1</h1>
+              </li>
+            </ul>
+            <ul class="p-3">
+              <li class="flex items-center space-x-2 rounded p-2 text-white bg-[#2A2A2A] hover:bg-[#3e3e3e] cursor-pointer">
+                <img src="img/image2.jpg" alt="" class="w-13 h-13 rounded">
+                <h1>Playlist_1</h1>
+              </li>
+            </ul>
           </div>
-          <div class="border rounded w-70 flex items-center space-x-2 hover:bg-blend-overlay">
-            <img src="img/music.jpg" alt="" class="object-cover w-10 rounded">
-            <h1>Playlist</h1>
-          </div>
-          <div class="border rounded w-70 flex items-center space-x-2 hover:bg-blend-overlay">
-            <img src="img/music.jpg" alt="" class="object-cover w-10 rounded">
-            <h1>Playlist</h1>
-          </div>
-          <div class="border rounded w-70 flex items-center space-x-2 hover:bg-blend-overlay">
-            <img src="img/music.jpg" alt="" class="object-cover w-10 rounded">
-            <h1>Playlist</h1>
-          </div>
-          <div class="border rounded w-70 flex items-center space-x-2 hover:bg-blend-overlay">
-            <img src="img/music.jpg" alt="" class="object-cover w-10 rounded">
-            <h1>Playlist</h1>
-          </div>
-          <div class="border rounded w-70 flex items-center space-x-2 hover:bg-blend-overlay">
-            <img src="img/music.jpg" alt="" class="object-cover w-10 rounded">
-            <h1>Playlist</h1>
-          </div>
-          <div class="border rounded w-70 flex items-center space-x-2 hover:bg-blend-overlay">
-            <img src="img/music.jpg" alt="" class="object-cover w-10 rounded">
-            <h1>Playlist</h1>
-          </div>
-          <div class="border rounded w-70 flex items-center space-x-2 hover:bg-blend-overlay">
-            <img src="img/music.jpg" alt="" class="object-cover w-10 rounded">
-            <h1>Playlist</h1>
-          </div>
-          <div class="border rounded w-70 flex items-center space-x-2 hover:bg-blend-overlay">
-            <img src="img/music.jpg" alt="" class="object-cover w-10 rounded">
-            <h1>Playlist</h1>
-          </div>
-          <div class="border rounded w-70 flex items-center space-x-2 hover:bg-blend-overlay">
-            <img src="img/music.jpg" alt="" class="object-cover w-10 rounded">
-            <h1>Playlist</h1>
-          </div>
-          <div class="border rounded w-70 flex items-center space-x-2 hover:bg-blend-overlay">
-            <img src="img/music.jpg" alt="" class="object-cover w-10 rounded">
-            <h1>Playlist</h1>
-          </div>
-          <div class="border rounded w-70 flex items-center space-x-2 hover:bg-blend-overlay">
-            <img src="img/music.jpg" alt="" class="object-cover w-10 rounded">
-            <h1>Playlist</h1>
-          </div>
-          <div class="border rounded w-70 flex items-center space-x-2 hover:bg-blend-overlay">
-            <img src="img/music.jpg" alt="" class="object-cover w-10 rounded">
-            <h1>Playlist</h1>
-          </div>
-          <div class="border rounded w-70 flex items-center space-x-2 hover:bg-blend-overlay">
-            <img src="img/music.jpg" alt="" class="object-cover w-10 rounded">
-            <h1>Playlist</h1>
-          </div>
-          <div class="border rounded w-70 flex items-center space-x-2 hover:bg-blend-overlay">
-            <img src="img/music.jpg" alt="" class="object-cover w-10 rounded">
-            <h1>Playlist</h1>
-          </div>
-          <div class="border rounded w-70 flex items-center space-x-2 hover:bg-blend-overlay">
-            <img src="img/music.jpg" alt="" class="object-cover w-10 rounded">
-            <h1>Playlist</h1>
-          </div>
-          <div class="border rounded w-70 flex items-center space-x-2 hover:bg-blend-overlay">
-            <img src="img/music.jpg" alt="" class="object-cover w-10 rounded">
-            <h1>Playlist</h1>
-          </div>
-        </div> -->
-
-        <ul class="p-2 space-y-2">
-          <li class="flex items-center space-x-2 bg-amber-200 rounded">
-            <img src="img/music.jpg" alt="" class="w-10 rounded">
-            <h1>Playlist_1</h1>
-          </li>
-          <li class="flex items-center space-x-2 bg-amber-200 rounded">
-            <img src="img/music.jpg" alt="" class="w-10 rounded">
-            <h1>Playlist_1</h1>
-          </li>
-          <li class="flex items-center space-x-2 bg-amber-200 rounded">
-            <img src="img/music.jpg" alt="" class="w-10 rounded">
-            <h1>Playlist_1</h1>
-          </li>
-          <li class="flex items-center space-x-2 bg-amber-200 rounded">
-            <img src="img/music.jpg" alt="" class="w-10 rounded">
-            <h1>Playlist_1</h1>
-          </li>
-          <li class="flex items-center space-x-2 bg-amber-200 rounded">
-            <img src="img/music.jpg" alt="" class="w-10 rounded">
-            <h1>Playlist_1</h1>
-          </li>
-          <li class="flex items-center space-x-2 bg-amber-200 rounded">
-            <img src="img/music.jpg" alt="" class="w-10 rounded">
-            <h1>Playlist_1</h1>
-          </li>
-          <li class="flex items-center space-x-2 bg-amber-200 rounded">
-            <img src="img/music.jpg" alt="" class="w-10 rounded">
-            <h1>Playlist_1</h1>
-          </li>
-          <li class="flex items-center space-x-2 bg-amber-200 rounded">
-            <img src="img/music.jpg" alt="" class="w-10 rounded">
-            <h1>Playlist_1</h1>
-          </li>
-          <li class="flex items-center space-x-2 bg-amber-200 rounded">
-            <img src="img/music.jpg" alt="" class="w-10 rounded">
-            <h1>Playlist_1</h1>
-          </li> <li class="flex items-center space-x-2 bg-amber-200 rounded">
-            <img src="img/music.jpg" alt="" class="w-10 rounded">
-            <h1>Playlist_1</h1>
-          </li>
-          <li class="flex items-center space-x-2 bg-amber-200 rounded">
-            <img src="img/music.jpg" alt="" class="w-10 rounded">
-            <h1>Playlist_1</h1>
-          </li>
-          <li class="flex items-center space-x-2 bg-amber-200 rounded">
-            <img src="img/music.jpg" alt="" class="w-10 rounded">
-            <h1>Playlist_1</h1>
-          </li>
-          <li class="flex items-center space-x-2 bg-amber-200 rounded">
-            <img src="img/music.jpg" alt="" class="w-10 rounded">
-            <h1>Playlist_1</h1>
-          </li>
-          <li class="flex items-center space-x-2 bg-amber-200 rounded">
-            <img src="img/music.jpg" alt="" class="w-10 rounded">
-            <h1>Playlist_1</h1>
-          </li>
-          <li class="flex items-center space-x-2 bg-amber-200 rounded">
-            <img src="img/music.jpg" alt="" class="w-10 rounded">
-            <h1>Playlist_1</h1>
-          </li>
-          <li class="flex items-center space-x-2 bg-amber-200 rounded">
-            <img src="img/music.jpg" alt="" class="w-10 rounded">
-            <h1>Playlist_1</h1>
-          </li>
-          <li class="flex items-center space-x-2 bg-amber-200 rounded">
-            <img src="img/music.jpg" alt="" class="w-10 rounded">
-            <h1>Playlist_1</h1>
-          </li>
-          <li class="flex items-center space-x-2 bg-amber-200 rounded">
-            <img src="img/music.jpg" alt="" class="w-10 rounded">
-            <h1>Playlist_1</h1>
-          </li>
-          <li class="flex items-center space-x-2 bg-amber-200 rounded">
-            <img src="img/music.jpg" alt="" class="w-10 rounded">
-            <h1>Playlist_1</h1>
-          </li>
-        </ul>
-      </div>
-      <div class="bg-amber-300 rounded-2xl w-195 h-[680px] overflow-y-auto p-3">
-        <div class="p-3 sticky top-0 z-100">
-          <button class="bg-blue-100 p-2 rounded-2xl">All</button>
-          <button class="bg-blue-100 p-2 rounded-2xl">Music</button>
-          <button class="bg-blue-100 p-2 rounded-2xl">Podcasts</button>
-          <div class="mt-4 grid grid-cols-2  items-center justify-center gap-1.5">
-            <div class="border rounded w-90 flex items-center space-x-2">
-              <img src="img/music.jpg" alt="" class="object-cover w-10 rounded">
-              <h1>Artist</h1>
+          <div class="p-3 h-[280px] mt-3.5" >
+            <div class="flex justify-between mb-5">
+              <h1>Made For U</h1>
+              <a href="#">Show All</a>
             </div>
-            <div class="border rounded w-90 flex items-center space-x-2">
-              <img src="img/music.jpg" alt="" class="object-cover w-10 rounded">
-              <h1>Artist</h1>
+            <div class="grid grid-cols-7 overflow-x-auto gap-x-55">
+              <div class="w-70 h-100">
+                <img src="img/image1.jpg" alt="#" class="w-50 h-55 rounded">
+                <h1>Recommand songs</h1>
+              </div>
+              <div class="w-70 h-100">
+                <img src="img/image2.jpg" alt="#" class="w-50 h-55 rounded">
+                <h1>Recommand songs</h1>
+              </div>
+              <div class="w-70 h-100">
+                <img src="img/image3.jpg" alt="#" class="w-50 h-55 rounded">
+                <h1>Recommand songs</h1>
+              </div>
+              <div class="w-70 h-100">
+                <img src="img/image4.jpg" alt="#" class="w-50 h-55 rounded">
+                <h1>Recommand songs</h1>
+              </div>
+              <div class="w-70 h-100">
+                <img src="img/image5.jpg" alt="#" class="w-50 h-55 rounded">
+                <h1>Recommand songs</h1>
+              </div>
             </div>
-            <div class="border rounded w-90 flex items-center space-x-2">
-              <img src="img/music.jpg" alt="" class="object-cover w-10 rounded">
-              <h1>Artist</h1>
+          </div>
+          <div class="p-3 h-[280px] mt-5" >
+            <div class="flex justify-between mb-5">
+              <h1>Made For U</h1>
+              <a href="#">Show All</a>
             </div>
-            <div class="border rounded w-90 flex items-center space-x-2">
-              <img src="img/music.jpg" alt="" class="object-cover w-10 rounded">
-              <h1>Artist</h1>
+            <div class="grid grid-cols-7 overflow-x-auto gap-x-55">
+              <div class="w-70 h-100">
+                <img src="img/image1.jpg" alt="#" class="w-50 h-55 rounded">
+                <h1>Recommand songs</h1>
+              </div>
+              <div class="w-70 h-100">
+                <img src="img/image2.jpg" alt="#" class="w-50 h-55 rounded">
+                <h1>Recommand songs</h1>
+              </div>
+              <div class="w-70 h-100">
+                <img src="img/image3.jpg" alt="#" class="w-50 h-55 rounded">
+                <h1>Recommand songs</h1>
+              </div>
+              <div class="w-70 h-100">
+                <img src="img/image4.jpg" alt="#" class="w-50 h-55 rounded">
+                <h1>Recommand songs</h1>
+              </div>
+              <div class="w-70 h-100">
+                <img src="img/image5.jpg" alt="#" class="w-50 h-55 rounded">
+                <h1>Recommand songs</h1>
+              </div>
             </div>
-            <div class="border rounded w-90 flex items-center space-x-2">
-              <img src="img/music.jpg" alt="" class="object-cover w-10 rounded">
-              <h1>Artist</h1>
-            </div>
-            <div class="border rounded w-90 flex items-center space-x-2">
-              <img src="img/music.jpg" alt="" class="object-cover w-10 rounded">
-              <h1>Artist</h1>
-            </div>
-            <div class="border rounded w-90 flex items-center space-x-2">
-              <img src="img/music.jpg" alt="" class="object-cover w-10 rounded">
-              <h1>Artist</h1>
-            </div>
-            <div class="border rounded w-90 flex items-center space-x-2">
-              <img src="img/music.jpg" alt="" class="object-cover w-10 rounded">
-              <h1>Artist</h1>
+          </div>
+  
+        </div>
+        <div id="Box3" class="bg-[#171714] shadow-2xl rounded-2xl h-[670px] overflow-y-auto w-85 text-white">
+          <div class="bg-[#171714] sticky top-0 z-80 p-4">
+            <h1 class="font-bold">Now Playing</h1>
+          </div>
+          <div class= "p-4 cursor-pointer">
+            <img src="img/image3.jpg" alt="" class=" rounded-xl ">
+            <h1 class="text-2xl hover:underline mt-2">Season</h1>
+            <h1 class="hover:underline">wave to earth</h1>
+          </div>
+          <div class="p-4 cursor-pointer">
+            <div class="cursor-pointer rounded-xl bg-[##1F1F1F] text-white">
+              <span class="relative">
+                <img src="img/wavetoearth.webp" alt="" class="rounded-xl">
+                <h1 class="absolute top-2 left-2 text-white">About the artist</h1>
+              </span>
+              <h1 class="p-2">wave to earth</h1>
+              <h1 class="p-2">8,094,964 Monthly Listeners</h1>
+              <p class="p-2">
+                Wave to Earth is a South Korean indie rock band that consists of lead vocalist and guitarist Kim Daniel, drummer Shin Donggyu, and bassist Cha Soonjong. 
+                Since their formation in 2019, they have released two studio albums.
+              </p>
             </div>
           </div>
         </div>
-        <div class="p-3 bg-amber-500 h-[280px] mt-3.5" >
-          <div class="flex justify-between mb-5">
-            <h1>Made For U</h1>
-            <a href="#">Show All</a>
-          </div>
-          <div class="grid grid-cols-7 overflow-x-auto gap-x-55">
-            <div class="w-70 h-100">
-              <img src="img/music.jpg" alt="#" class="w-50 rounded">
-              <h1>Recommand songs</h1>
-            </div>
-            <div class="w-70 h-100">
-              <img src="img/music.jpg" alt="#" class="w-50 rounded">
-              <h1>Recommand songs</h1>
-            </div>
-            <div class="w-70 h-100">
-              <img src="img/music.jpg" alt="#" class="w-50 rounded">
-              <h1>Recommand songs</h1>
-            </div>
-            <div class="w-70 h-100">
-              <img src="img/music.jpg" alt="#" class="w-50 rounded">
-              <h1>Recommand songs</h1>
-            </div>
-            <div class="w-70 h-100">
-              <img src="img/music.jpg" alt="#" class="w-50 rounded">
-              <h1>Recommand songs</h1>
-            </div>
-            <div class="w-70 h-100">
-              <img src="img/music.jpg" alt="#" class="w-50 rounded">
-              <h1>Recommand songs</h1>
-            </div>
-            <div class="w-70 h-100">
-              <img src="img/music.jpg" alt="#" class="w-50 rounded">
-              <h1>Recommand songs</h1>
-            </div>
-          </div>
-        </div>
-        <div class="p-3 bg-amber-500 h-[280px] mt-5" >
-          <div class="flex justify-between mb-5">
-            <h1>Made For U</h1>
-            <a href="#">Show All</a>
-          </div>
-          <div class="grid grid-cols-7 overflow-x-auto gap-x-55">
-            <div class="w-70 h-100">
-              <img src="img/music.jpg" alt="#" class="w-50 rounded">
-              <h1>Recommand songs</h1>
-            </div>
-            <div class="w-70 h-100">
-              <img src="img/music.jpg" alt="#" class="w-50 rounded">
-              <h1>Recommand songs</h1>
-            </div>
-            <div class="w-70 h-100">
-              <img src="img/music.jpg" alt="#" class="w-50 rounded">
-              <h1>Recommand songs</h1>
-            </div>
-            <div class="w-70 h-100">
-              <img src="img/music.jpg" alt="#" class="w-50 rounded">
-              <h1>Recommand songs</h1>
-            </div>
-            <div class="w-70 h-100">
-              <img src="img/music.jpg" alt="#" class="w-50 rounded">
-              <h1>Recommand songs</h1>
-            </div>
-            <div class="w-70 h-100">
-              <img src="img/music.jpg" alt="#" class="w-50 rounded">
-              <h1>Recommand songs</h1>
-            </div>
-            <div class="w-70 h-100">
-              <img src="img/music.jpg" alt="#" class="w-50 rounded">
-              <h1>Recommand songs</h1>
-            </div>
-          </div>
-        </div>
-
-        
-      </div>
-      <div class="bg-amber-300 rounded-2xl w-80 h-[680px] overflow-y-auto">
-
       </div>
     </main>
 
-    <footer class="bg-white fixed bottom-0 z-100 w-full">
-      <div class="container mx-auto px-6 py-6 text-center text-sm text-gray-500">
-        &copy; 2025 FRrrMusic. All rights reserved.
+    <footer class="bg-black fixed bottom-0 z-100 w-full text-white">
+
+      <div class="p-2 flex justify-between items-center">
+        <div class="ml-3.5 flex items-center space-x-4">
+          <img src="img/image3.jpg" alt="#" class="w-15 h-15 rounded">
+          <div>
+            <h1 class="font-bold ">Season</h1>
+            <h1 class="">wave to earth</h1>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div class="flex justify-between items-center">
+              <div class="text-grey-darker ">
+                <svg class="w-6 h-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M6.59 12.83L4.4 15c-.58.58-1.59 1-2.4 1H0v-2h2c.29 0 .8-.2 1-.41l2.17-2.18 1.42 1.42zM16 4V1l4 4-4 4V6h-2c-.29 0-.8.2-1 .41l-2.17 2.18L9.4 7.17 11.6 5c.58-.58 1.59-1 2.41-1h2zm0 10v-3l4 4-4 4v-3h-2c-.82 0-1.83-.42-2.41-1l-8.6-8.59C2.8 6.21 2.3 6 2 6H0V4h2c.82 0 1.83.42 2.41 1l8.6 8.59c.2.2.7.41.99.41h2z"/></svg>
+              </div>
+              <div class="text-grey-darker">
+                <svg class="w-5 h-5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M4 5h3v10H4V5zm12 0v10l-9-5 9-5z"/></svg>
+              </div>
+              <div class="text-white p-8 rounded-full bg-red-light shadow-lg">
+                <svg class="w-5 h-5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5 4h3v12H5V4zm7 0h3v12h-3V4z"/></svg>
+              </div>
+              <div class="text-grey-darker">
+                <svg class="w-5 h-5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 5h3v10h-3V5zM4 5l9 5-9 5V5z"/></svg>
+              </div>
+              <div class="text-grey-darker">
+                <svg class="w-5 h-5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5 4a2 2 0 0 0-2 2v6H0l4 4 4-4H5V6h7l2-2H5zm10 4h-3l4-4 4 4h-3v6a2 2 0 0 1-2 2H6l2-2h7V8z"/></svg>
+              </div>
+            </div>
+            <div id="songSlider" style="appearance: none; -webkit-appearance: none; width: 100%; height: 5px; background: #fff; border-radius: 5px; position: relative;">
+              <input type="range"value="0" id="seekBar" style="-webkit-slide-thumb: none; width: 10px; height: 20px; background: #fff; ">
+            </div>
+          </div>
+          
       </div>
     </footer>
+    <script src="script/web.js"></script>
     <script src="https://kit.fontawesome.com/f488a9e6e0.js" crossorigin="anonymous"></script>
   </body>
 </html>
